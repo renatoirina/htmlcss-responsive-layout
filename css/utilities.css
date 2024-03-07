@@ -1,0 +1,25 @@
+/* UTILITIES */
+:root {
+    --primary-color: #0084FD;
+    --light-blue: #B5DDFF;
+    --lilac-color: #9792E4;
+    --yellow-color: #FDC15F;
+    --black-color: #333333;
+    --header-height: 70px;
+}
+
+.padding-y-20 {
+    padding: 0 20px;
+}
+
+.padding-x-20 {
+    padding: 20px 0;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}

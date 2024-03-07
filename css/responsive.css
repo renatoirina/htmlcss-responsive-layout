@@ -1,0 +1,89 @@
+/* RESPONSIVE CSS */
+
+
+/* TABLET */
+
+/* HERO */
+/* GENERAL */
+@media screen and (min-width: 768px) {
+    .hero-columns {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .big-column {
+        width: calc(100% / 2);
+    }
+    .column {
+        width: calc(100% / 3 - 20px);
+    }
+    .column-grow {
+        flex-grow: 1;
+    }
+}
+
+/* FEATURES */
+@media screen and (min-width: 768px) {
+    .feature-card {
+        width: calc(100% / 2 - 20px);
+    }
+    .feature-columns {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* ABOUT US */
+@media screen and (min-width: 768px) {
+    .page-about {
+        flex-direction: row;
+    }
+    .page-about .info-text {
+        width: 60%;
+    }
+    .about-picture {
+        width: 40%;
+    }
+}
+
+
+/* DESKTOP */
+
+/* HERO */
+/* GENERAL */
+@media screen and (min-width: 992px) {
+    .hero-columns {
+        width: 70%;
+    }
+}
+
+/* PLANNING */
+@media screen and (min-width: 992px) {
+    .planning-types {
+        flex-direction: row;
+    }
+    .app-development-card {
+        height: 70%;
+    }
+    .app-development-plan {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+/* TESTIMONIALS */
+@media screen and (min-width: 992px) {
+    .testimonial-info {
+        width: 100%;
+    }
+    .testimonial-card {
+        width: 100%;
+    }
+}
+
+/* FEATURES */
+@media screen and (min-width: 992px) {
+    .feature-card {
+        width: calc(100% / 3 - 20px);
+    }
+}
