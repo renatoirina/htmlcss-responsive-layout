@@ -1,79 +1,92 @@
 /* RESET */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-img {
+img{
     width: 100%;
 }
 
 
 /* COMMON */
-html {
+html{
     scroll-behavior: smooth;
 }
 
-body {
+body{
     font-family: 'PT Sans', sans-serif;
 }
 
-ul {
+ul{
     list-style-type: none;
 }
 
-a {
+a{
     cursor: pointer;
     color: inherit;
 }
 
-
-/* HEADER */
-.page-header {
-    background-color: var(--primary-color);
-    position: fixed;  
-    height: var(--header-height);
-    width: 100%; 
-    line-height: var(--header-height);
-    color: white;
+/* layout */
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-.header-content {
+.smaller-container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* HEADER */
+header{
+    background-color: var(--blue);
+    position: fixed;  
+    height: 70px;
+    width: 100%; 
+    line-height: 70px;
+    color: white;
+    z-index: 999;
+}
+
+.header{
     display: flex;
     justify-content: space-between;
 }
 
-.page-logo, .page-hamburger {
-    line-height: var(--header-height);
+.logo, .hamburger{
+    line-height: 70px;
 }
 
-.page-logo {
+.logo{
     display: flex;
     align-items: center;
 }
 
-.page-hamburger {
+.hamburger{
     color: white;
     font-size: 1.3rem;
 }
 
-.page-nav {
+.nav-head{
     display: none;
 }
 
-.page-nav ul {
+.nav-head ul{
     height: 100%;
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.page-nav ul a {
+.nav-head ul a{
     text-decoration: none;
 }
 
-.page-button {
+.bttn-hdr{
     background-color: white;
     color: black;
     border-radius: 15px;
@@ -81,178 +94,326 @@ a {
 }
 
 /* MAIN */
-.wrapper {
+
+
+/* HERO */
+/* general */
+.hero{
+    padding-top: calc(var(--headerheight) + 30px);    
+    padding-bottom: 20px;
+}
+
+.all-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.all-col p{
+    font-size: 0.9rem ;
+    line-height: 1.7rem;
+}
+
+/* cols */
+.col{
+    width: 100%;
+    background-color: var(--lightblue);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.col h3{
+    color: var(--blue);
+    font-size: 1.5rem;
+}
+
+.col a{
+    text-decoration: none;
+}
+
+.col img{
+    display: block;
+}
+
+.col-bttn{
+    background-color: var(--blue);
+    color: white;
+    margin: 25px 0;
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    display: block;
+}
+
+.col-bttn i{
+    display: inline;
+}
+
+.col-img{
+    font-size: 5rem;
+    color: var(--blue);
+}
+
+
+/* PLANNING */
+/* general */
+.planning{
+    background-color: var(--lilac);
+}
+
+.planning p{
+    font-size: 0.9rem;
+}
+
+.plann-types{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* specific */
+.strategic{
+    width: 100%;
+}
+
+.strategic h2{
+    font-size: 2rem;
+}
+
+
+.app-dev-card{
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.app-dev-card i{
+    padding: 12px 0;
+}
+
+.app-dev-card p{
+    font-style: italic;
+}
+
+.app-dev-card a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: var(--lilac);
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.app-dev-wrap{
     width: 90%;
     margin: 0 auto;
 }
 
-/* HERO */
-/* general */
-.page-hero {
-    padding-top: calc(var(--header-height) + 30px);    
-    padding-bottom: 20px;
-}
-
-.hero-columns {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* bigcol */
-.big-column {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-
-    background-color: var(--light-blue);
-    border-radius: 20px;
-    width: 100%;
-    margin: 10px;
-
-    /* DEBUG */
-    /* height: 200px; */
-}
-
-.big-column a {
-    text-decoration: none;
-    text-align: center;
-}
-
-.big-column-button {
-    text-align: center;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 10px;
-    border-radius: 20px;
-    text-align: center;
-    width: 60%;
-    display: block;
-}
-
-.column {
-    background-color: var(--light-blue);
-    border-radius: 20px;
-    width: 100%;
-    margin: 10px;
-
-    /* DEBUG */
-    height: 200px;
-}
-
-.column-grow {
-    flex-grow: 0;
-}
-
-.big-column h2, .column h2 {
-    color: var(--primary-color);
-    text-align: center;
-}
-.big-column p, .column p {
-    color: #5a6e7f;
-    font-weight: bold;
-    padding-top: 20px;
-}
-
-/* PLANNING */
-.page-planning {
-    background-color: var(--lilac-color);
-}
-
-.planning-types {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.strategic-plan {
-    width: 100%;
-    height: 200px;
-    border: 1px solid black;
-}
-
-.app-development-plan {
-    width: 100%;
-    height: 200px;
-    border: 1px solid black;
-}
-
-.app-development-card {
-    width: 100%;
-    background-color: white;
-    border-radius: 20px;
-    height: 100%;
-}
-
 /* TESTIMONIALS */
-.page-testimonials {
+/* general */
+.testimonials p{
+    font-size: 0.9rem;
+}
+
+.all-testi{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.testimonial-info {
-    width: 100%;
-    height: 200px;
-    border: 1px solid black;
+/* specific */
+.testi-copy h2{
+    font-size: 2rem;
 }
-
-.testimonial-card {
-    background-color: var(--lilac-color);
+.testi-card{
+    background-color: var(--lilac);
     border-radius: 20px;
     width: 100%;
     margin: 10px;
-    height: 200px;
+}
+
+.testi-card img{
+    width: 70%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.testi-text i{
+    font-size: 1.3rem;
 }
 
 /* FEATURES */
-.page-features {
-    background-color: var(--lilac-color);
+/* general */
+.features{
+    background-color: var(--lilac);
 }
 
-.feature-columns {
+.features p{
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+}
+
+.all-feat{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.feature-card {
+/* specific */
+.feat-text h2{
+    font-size: 2rem;
+}
+
+.feat-card{
     background-color: white;
     border-radius: 20px;
     width: 100%;
     margin: 10px;
-    height: 200px;
+    padding: 0 20px;
+}
+
+.feat-card h2{
+    font-size: 3rem;
+}
+
+.feat-card a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--lilac);
+    border-radius: 20px;
+    padding: 10px 50px;
 }
 
 /* ABOUT US */
-.page-about {
+/* general */
+.about-us{
+    margin: 40px 0;
+}
+
+.info-and-pic{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.about-picture {
-    width: 100%;
-    height: 200px;
-    border: 1px solid black;
+.about-pic{
+    margin-bottom: 20px;
+}
+
+/* specific */
+.info-text h2{
+    font-size: 2rem;
+}
+
+.info-text p{
+    font-size: 0.9rem;
+    padding-bottom: 40px;
+    line-height: 2rem;
+}
+
+.about-pic h3{
+    line-height: 2rem;
+}
+
+.about-pic img{
+    width: 50%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    display: inline-block;
+}
+
+.about-image{
+    position: relative;
+}
+
+.about-image i{
+    position: absolute;
+    font-size: 3rem;
+    top: 0;
+    right: 50%;
+    color: var(--lilac);
+}
+
+.about-bttn{
+    background-color: var(--lilac);
+    color: white;
+    padding: 5px 0;
+    border-radius: 20px;
+    text-align: center;
+    width: 70%;
+    display: block;
+}
+
+.about-bttn i{
+    display: inline;
+}
+
+.about-bttn a{
+    font-size: 0.9rem;
+    text-decoration: none;
 }
 
 /* FOOTER */
-.page-footer .get-started {
-    background-color: var(--lilac-color);
+/* general */
+.get-started{
+    background-color: var(--lilac);
 }
 
-.c-t-a {
-    border: 1px solid black;
-    height: 100px;
+.c-t-a{
+    color: white;
 }
 
-.footer-bottom {
-    background-color: var(--black-color);
+.footer-bottom{
+    background-color: var(--black);
 }
 
-.copy-rights {
-    border: 1px solid white;
-    height: 50px;
+/* specific */
+.c-t-a span{
+    color: var(--lilac2);
+}
+
+.c-t-a h3{
+    font-size: 2rem;
+}
+
+.c-t-a h2{
+    font-size: 4rem;
+    color: var(--yellow);
+}
+
+.c-t-a :last-child{
+    font-size: 0.7rem;
+}
+
+#foot-bttn{
+    margin: 20px;
+    background-color: white;
+    color: white;
+    margin: 25px 0;
+    padding: 20px 50px;
+    border-radius: 30px;
+    color: var(--lilac);
+    letter-spacing: 0.1rem;
+}
+
+#foot-bttn a{
+    text-decoration: none;
+}
+
+#foot-bttn{
+    display: inline-block;
+}
+
+.copyright p{
+    font-size: 0.7rem;
+}
+
+.copyright a{
+    color: var(--lilac);
 }

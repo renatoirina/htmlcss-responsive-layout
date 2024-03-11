@@ -1,25 +1,58 @@
 /* UTILITIES */
-:root {
-    --primary-color: #0084FD;
-    --light-blue: #B5DDFF;
-    --lilac-color: #9792E4;
-    --yellow-color: #FDC15F;
-    --black-color: #333333;
-    --header-height: 70px;
+
+/* custom properties */
+:root{
+    --blue: #0084FD;
+    --lightblue: #B5DDFF;
+    --lilac: #9792E4;
+    --lilac2: #b7b4df;
+    --yellow: #FDC15F;
+    --black: #333333;
+    --headerheight: 70px;
 }
 
-.padding-y-20 {
+/* padding and margin */
+.padding-20{
+    padding: 20px;
+}
+
+.padding-x-20{
     padding: 0 20px;
 }
-
-.padding-x-20 {
+.padding-y-20{
     padding: 20px 0;
 }
 
-.padding-bottom-20 {
+.padding-bottom-20{
     padding-bottom: 20px;
 }
 
-.padding-top-20 {
+.padding-top-20{
     padding-top: 20px;
+}
+
+.margin-bottom-20{
+    margin-bottom: 20px;
+}
+
+.margin-bottom-30{
+    margin-bottom: 30px;
+}
+
+/* text */
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+/* text-colors */
+.white-text{
+    color: white;
+}
+
+.lilac-text{
+    color: var(--lilac);
 }
